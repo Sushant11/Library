@@ -1,33 +1,90 @@
-.App {
+.mainhead {
+  font-size: 3em;
   text-align: center;
+  color: #34495E  ;
+  padding: 1.5% 0 10px 0;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+blockquote {
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* position: absolute; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.mainform {
+  text-align: center;
+  background-color: #fff;
   color: white;
+  border-top: 1px solid #34495E  ;
+  border-bottom: 1px solid #34495E  ;
+  color: #34495E  ;
+  padding: 50px 0;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.form-control:focus {
+  color: #34495E  ;
+  background-color: #ffffff40;
+  border-color: #34495E  ;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem #ffffff40;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn {
+  background-color: #34495E  ;
+  color: #fff;
+  transition: 300ms ease;
+}
+
+.btn:hover {
+  box-shadow: 0 0 5px 0px #34495E  ;
+  transition: 300ms ease;
+}
+
+.btn:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+button:focus {
+  outline: none;
+  /* outline: 5px auto -webkit-focus-ring-color; */
+}
+
+.compheading {
+  text-align: center;
+  margin: auto;
+  border-bottom: 1px solid#34495E  ;
+  border-top: 1px solid #34495E  ;
+  width: 13%;
+  color: #34495E  ;
+  /* border-radius: 20px; */
+  margin-top: 40px;
+}
+
+.books {
+  margin-top: 10px;
+}
+
+.card {
+  /* width: 40%; */
+  margin:auto;
+  text-align: center;
+  box-shadow: 0 0 4px 0px #a49f9f;
+  display: inline-block;
+}
+.card:hover{
+  box-shadow: 0 0 2px 0px #a49f9f;
+}
+.card-img-top{
+  height: 315px;
+  width:200px;
+  margin: auto;
+  padding: 10px;
+}
+.book{
+  text-align: center;
+  margin:5px 0;
 }
