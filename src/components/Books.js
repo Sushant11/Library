@@ -6,7 +6,7 @@ export class Books extends React.Component {
         return (
             <div className='container books'>
                 <div className="row">
-                    <div className="col-12 col-lg-6 book">
+                    <div className="col-12 col-lg-4 book">
                         <div className="card">
                             <div className='row'>
                                 <div className="col-12 col-lg-6">
@@ -22,7 +22,7 @@ export class Books extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className="col-12 col-lg-6 book">
+                    <div className="col-12 col-lg-4 book">
                         <div className="card">
                             <div className='row'>
                                 <div className="col-12 col-lg-6">
@@ -38,7 +38,7 @@ export class Books extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className="col-12 col-lg-6 book">
+                    <div className="col-12 col-lg-4 book">
                         <div className="card">
                             <div className='row'>
                                 <div className="col-12 col-lg-6">
