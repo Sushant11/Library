@@ -1,5 +1,5 @@
 import React from 'react';
-import '../App.css';
+// import '../App.css';
 
 export class Err extends React.Component {
     render() {
@@ -12,3 +12,5 @@ export class Err extends React.Component {
         );
     }
 }
+
+export default Err

@@ -1,11 +1,11 @@
 import React from 'react';
 import './Navbar.css';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-import { Home } from './Home';
-import { Read } from './Read';
-import { Reading } from './Reading';
-import { Wish } from './Wish';
-import { Err } from "./Error";
+import Home from '../components/Home'
+import Read from './stateless/Read'
+import Reading from './stateless/Reading';
+import Wish from './stateless/Wish';
+import { Err } from "./stateless/Error";
 
 
 export class Navigation extends React.Component {
@@ -31,6 +31,7 @@ export class Navigation extends React.Component {
                                 <Link to="/Wishlist" className="nav-link" data-toggle="tooltip" title="WishList"><i className="fas fa-book-medical"></i></Link>
                             </li>
                         </ul>
+                      
                     </div>
                 </nav>
                 <Switch>
