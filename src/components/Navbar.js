@@ -22,13 +22,13 @@ export class Navigation extends React.Component {
                                 <Link to="/" className="nav-link" data-toggle="tooltip" title="Home"><i className="fas fa-book-reader" ></i></Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/Read" className="nav-link" data-toggle="tooltip" title="Read"><i className="fas fa-book"></i></Link>
+                                <Link to="/read" className="nav-link" data-toggle="tooltip" title="Read"><i className="fas fa-book"></i></Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/Reading" className="nav-link" data-toggle="tooltip" title="Reading"><i className="fas fa-book-open"></i></Link>
+                                <Link to="/reading" className="nav-link" data-toggle="tooltip" title="Reading"><i className="fas fa-book-open"></i></Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/Wishlist" className="nav-link" data-toggle="tooltip" title="WishList"><i className="fas fa-book-medical"></i></Link>
+                                <Link to="/wishlist" className="nav-link" data-toggle="tooltip" title="WishList"><i className="fas fa-book-medical"></i></Link>
                             </li>
                         </ul>
                       
