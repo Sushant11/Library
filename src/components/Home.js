@@ -29,39 +29,76 @@ class Home extends React.Component {
     handleClick = (e) => {
         let data = e.target.getAttribute('id')
         let btnName = e.target.getAttribute('name')
+        let read = this.state.books.find(item => item.id === data);
+        let readArray = JSON.parse(localStorage.getItem('read')) || []
+        let reading = this.state.books.find(item => item.id === data);
+        let readingArray = JSON.parse(localStorage.getItem('reading')) || []
+        let wish = this.state.books.find(item => item.id === data);
+        let wishArray = JSON.parse(localStorage.getItem('wish')) || []
         console.log(data)
         console.log(btnName)
         if (btnName === 'read') {
-            let id = JSON.parse(localStorage.getItem('read')).id
-            console.log(id)
             let confirm = window.confirm('Add To Read?')
             if (confirm === true) {
-                let read = this.state.books.find(item => item.id === data);
-                let readArray = JSON.parse(localStorage.getItem('read')) || []
-                readArray.push(read)
-                localStorage.setItem('read', JSON.stringify(readArray))
+                if (read === [] || read === null) {
+                    return null
+                }
+                else {
+                    const check = readArray.find(book => book.id == read.id)
+                    const checkReading = readingArray.find(book => book.id == reading.id)
+                    const checkWish = wishArray.find(book => book.id == wish.id)
+                    if (check === undefined && checkReading === undefined && checkWish === undefined) {
+                        readArray.push(read)
+                        localStorage.setItem('read', JSON.stringify(readArray))
+                    }
+                    else {
+                        alert('Sorry! Book Already in the one of the Shelves')
+                    }
+                }
+
             }
 
         }
         else if (btnName === 'reading') {
             let confirm = window.confirm('Add To Reading?')
             if (confirm === true) {
-                let reading = this.state.books.find(item => item.id === data);
-                let readingArray = JSON.parse(localStorage.getItem('reading')) || []
-                readingArray.push(reading)
-                localStorage.setItem('reading', JSON.stringify(readingArray))
+                if (reading === [] || reading === null) {
+                    return null
+                }
+                else {
+                    const check = readArray.find(book => book.id == read.id)
+                    const checkReading = readingArray.find(book => book.id == reading.id)
+                    const checkWish = wishArray.find(book => book.id == wish.id)
+                    if (check === undefined && checkReading === undefined && checkWish === undefined) {
+                        readingArray.push(reading)
+                        localStorage.setItem('reading', JSON.stringify(readingArray))
+                    }
+                    else {
+                        alert('Sorry! Book Already in the one of the Shelves')
+                    }
+                }
+
             }
         }
         else {
             let confirm = window.confirm('Add To WishList?')
             if (confirm === true) {
-                let wish = this.state.books.find(item => item.id === data);
-                console.log(wish)
-                let wishArray = JSON.parse(localStorage.getItem('wish')) || []
-                console.log(wishArray)
-                wishArray.push(wish)
-                console.log(wishArray)
-                localStorage.setItem('wish', JSON.stringify(wishArray))
+                if (wish === [] || wish === null) {
+                    return null
+                }
+                else {
+                    const check = readArray.find(book => book.id == read.id)
+                    const checkReading = readingArray.find(book => book.id == reading.id)
+                    const checkWish = wishArray.find(book => book.id == wish.id)
+                    if (check === undefined && checkReading === undefined && checkWish === undefined) {
+                        wishArray.push(wish)
+                        localStorage.setItem('wish', JSON.stringify(wishArray))
+                    }
+                    else {
+                        alert('Sorry! Book Already in the one of the Shelves')
+                    }
+                }
+
             }
         }
 

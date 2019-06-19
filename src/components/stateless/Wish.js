@@ -8,11 +8,11 @@ class Read extends React.Component {
         let list = JSON.parse(localStorage.getItem('wish')) || []
         let read = list.find(item => item.id === data);
         console.log(read)
-        let confirm = window.confirm('Are you reading this book?')
+        let confirm = window.confirm('Send to READING?')
         if(confirm === true){
             list.pop(read)
             localStorage.setItem('wish', JSON.stringify(list))
-            alert('Added To READING')
+            // alert('Added To READING')
             document.location.reload()
             let readingArray = JSON.parse(localStorage.getItem('reading')) || []
             readingArray.push(read)

@@ -19,13 +19,6 @@ function Form(props){
                     </form>
                 </div>
             </div>
-            <footer>
-                <blockquote className="blockquote text-center">
-                    <p className="mb-0">"A reader lives a thousand lives before he dies."</p>
-                    <footer className="blockquote-footer">George R.R. Martin</footer>
-                </blockquote>
-            </footer>
-
         </div>
     );
 }

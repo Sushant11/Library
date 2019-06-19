@@ -4,6 +4,17 @@ import React from 'react';
 
 class Read extends React.Component {
     render() {
+        const handleRemove = (e) => {
+            let confirm = window.confirm('Delete?')
+            if (confirm === true) {
+                let data = e.target.getAttribute('id')
+                let list = JSON.parse(localStorage.getItem('read')) || []
+                let read = list.find(item => item.id === data);
+                list.pop(read)
+                localStorage.setItem('read', JSON.stringify(list))
+                window.location.reload()
+            }
+        }
         const readData = JSON.parse(localStorage.getItem('read'))
         if (readData !== null) {
             return (
@@ -22,10 +33,13 @@ class Read extends React.Component {
                                         <h6>{book.volumeInfo.authors}</h6>
                                         <hr />
                                         <div className='row'>
-                                            <div className='col-sm-12 col-lg-12'>
-                                                <a href={book.volumeInfo.infoLink} target='_blank'>
-                                                    <button type="button" className="btn book-button" style={{width: '40%'}}><i className="fas fa-info btn-icon"></i> Info</button>
+                                            <div className='col-sm-12 col-lg-6'>
+                                                <a href={book.volumeInfo.infoLink} target='_blank' rel="noopener noreferrer">
+                                                    <button type="button" className="btn book-button"><i className="fas fa-info btn-icon"></i>Info</button>
                                                 </a></div>
+                                            <div className='col-sm-12 col-lg-6'>
+                                                <button type="button" className="btn book-button" name='remove' id={book.id} onClick={handleRemove}><i className="fas fa-book-dead" ></i> Remove</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -35,7 +49,7 @@ class Read extends React.Component {
                 </div>
             )
         }
-        else if(readData === [] || readData === null) {
+        else if (readData === [] || readData === null) {
             return (
                 <div>
                     <div className='compheading'>

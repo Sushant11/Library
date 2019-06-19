@@ -7,7 +7,7 @@ function Results(props) {
             {props.bookData.map(book => {
                 return (
                     <div key={book.id} className=' card books-results'>
-                        {book.volumeInfo.imageLinks ? <a href={book.volumeInfo.infoLink} target='_blank' rel="noopener noreferrer"><img src={book.volumeInfo.imageLinks.thumbnail} alt={book.title} className='book-cover' data-toggle="tooltip" title="Info"/></a> : null}
+                        {book.volumeInfo.imageLinks ? <a href={book.volumeInfo.infoLink} target='_blank' rel="noopener noreferrer"><img src={book.volumeInfo.imageLinks.smallThumbnail} alt={book.title} className='book-cover' data-toggle="tooltip" title="Info"/></a> : null}
                         <div className='card-body'>
                             {book.volumeInfo.title}
                             {book.volumeInfo.subtitle ? <h6>- {book.volumeInfo.subtitle}</h6> : null}

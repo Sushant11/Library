@@ -2,21 +2,21 @@ import React from 'react';
 // import '.../App.css'
 
 
-class Read extends React.Component {
+class Reading extends React.Component {
     handleRead =(e) =>{
         let data = e.target.getAttribute('id')
         let list = JSON.parse(localStorage.getItem('reading')) || []
-        let read = list.find(item => item.id === data);
-        console.log(read)
-        let confirm = window.confirm('Have You finished reading this book?')
+        let reading = list.find(item => item.id === data);
+        console.log(reading)
+        let confirm = window.confirm('Send to READ?')
         if(confirm === true){
-            list.pop(read)
+            list.pop(reading)
             localStorage.setItem('reading', JSON.stringify(list))
-            alert('Added To READ')
+            // alert('Added To READ')
             document.location.reload()
-            let readArray = JSON.parse(localStorage.getItem('read')) || []
-            readArray.push(read)
-            localStorage.setItem('read', JSON.stringify(readArray))
+            let readingArray = JSON.parse(localStorage.getItem('read')) || []
+            readingArray.push(reading)
+            localStorage.setItem('read', JSON.stringify(readingArray))
         }
         
     }
@@ -63,4 +63,4 @@ class Read extends React.Component {
 
 }
 
-export default Read
+export default Reading
