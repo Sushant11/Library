@@ -2,7 +2,7 @@
   Personal Shelf
 </h1>
 <p align="center">
- <a href="personalshelf.netlify.com" target="_blank">Personal Book Tracker</a> built with <a href="https://reactjs.org/" target="_blank">React</a>and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>
+ <a href="personalshelf.netlify.com" target="_blank">Personal Book Tracker</a> built with <a href="https://reactjs.org/" target="_blank">React</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>
 </p>
 
 ## 💥 Bootstrapped With
